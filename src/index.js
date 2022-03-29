@@ -5,7 +5,7 @@ const Sticker = require("./lib/util");
  * @param {String} categoryName nama sticker nya apa?
  * @returns {Promise<{name: string, title: string, result: Array<{link_download: string}}>}
  */
-const getSticker = async (categoryName) => {
+function getSticker(categoryName) {
     return new Promise(async (resolve, reject) => {
         const sticker = new Sticker();
         const result = await sticker.parseStickerByNameCategory(categoryName);
