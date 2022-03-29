@@ -3,7 +3,7 @@ const cheerio = require('cheerio');
 module.exports = class Sticker {
     async parseStickerByNameCategory(categoryName) {
         return new Promise(async (resolve, reject) => {
-            const page = Math.floor(Math.random() * 20) + 1;
+            const page = Math.floor(Math.random() * 7) + 1;
             const stickers = [];
             const response = await fetch(`https://combot.org/telegram/stickers?page=${page}&q=${categoryName}`);
             const html = await response.text();
